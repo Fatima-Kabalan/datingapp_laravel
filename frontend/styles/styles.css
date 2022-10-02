@@ -50,7 +50,6 @@ body {
     justify-content: center;
 }
 
-
 /* sign in form */
 .page-content-wrapper {
     display: flex;
@@ -68,7 +67,7 @@ body {
 .form-wrapper {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 60%;
     padding: 20px 20px;
     background-color: #FFFFFF;
     border: 1px solid #ec0d0d;
