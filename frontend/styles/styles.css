@@ -49,3 +49,79 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+
+/* sign in form */
+.page-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+.page-content-wrapper  h1 {
+    margin: 15px 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 20px 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #ec0d0d;
+    border-radius: 15px;
+}
+
+.form-wrapper > input {
+    margin: 0px 10px 10px 10px;
+    padding: 10px 10px;
+    border: 2px solid #ec0d0d;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.form-wrapper > label {
+    margin: 0px 13px;
+}
+
+.form-wrapper h3 {
+    text-align: center;
+}
+
+.form-wrapper > button {
+    align-self: center;
+}
+
+.form-wrapper > input:focus {
+    border: 2px solid #ec0d0d;
+}
+
+.remember-wrapper {
+    align-self: center;
+    display: flex;
+    align-items: center;
+}
+
+.remember-wrapper > input {
+    zoom: 1.2;
+    margin: 15px 10px;
+}
+
+/* Sign up */
+.signup-wrapper {
+    margin: 10px 0px;
+}
+
+.signup-wrapper span {
+    text-decoration: underline;
+    color: #ec0d0d;
+}
+
+.signup-wrapper span:hover {
+    cursor: pointer;
+    color: #ec0d0d;
+    transition: 500ms;
+}
