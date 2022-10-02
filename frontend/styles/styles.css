@@ -24,8 +24,28 @@ body {
 
 /* Signin Signup page */
 .background-image{
-    background-image: url("../assets/Images/lovebirds.jpg");
+    background-image: url("../assets/Images/hearts.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+}
+
+
+/* Signin Signup page */
+.index-body-wrapper {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-body-wrapper > div {
+    width: 50vw;
+}
+
+.main-logo {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
