@@ -1,0 +1,31 @@
+/* CSS Reset */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+img {
+    height: 100%;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+/** Website sections **/
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    margin: 10px;
+}
+
+/* Signin Signup page */
+.background-image{
+    background-image: url("../assets/Images/lovebirds.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
