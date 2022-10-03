@@ -124,3 +124,122 @@ body {
     color: #ec0d0d;
     transition: 500ms;
 }
+
+
+/* Signup popup */
+.signup-popup {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    width: 500px;
+    height: 550px;
+    border-color: #ec0d0d;
+    border-radius: 15px;
+}
+
+.signup-popup h1 {
+    margin: 10px 0px;
+}
+
+.signup-popup form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-popup form > label {
+    align-self: flex-start !important;
+    margin: 0px 6%;
+}
+
+.signup-popup span {
+    align-self: self-end;
+    margin: 10px 10px;
+}
+
+.signup-popup input {
+    width: 90%;
+    margin: 0px 0px 15px 0px;
+    padding: 10px 10px;
+    border: 2px solid #ec0d0d;
+    border-radius: 15px;
+    align-self: center;
+}
+
+.signup-popup form > p {
+    align-self: flex-start !important;
+    margin: 0px 6%;
+}
+
+.signup-popup button {
+    align-self: center;
+}
+
+
+/* Utilities */
+.purpule {
+    color: #ec0d0d;
+}
+.hide {
+    display: none;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.section-title {
+    align-self: flex-start;
+    font-size: 30px;
+    margin: 20px 80px;
+}
+
+.btn {
+    width:  fit-content;
+    padding: 10px 50px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.btn-purpule {
+    background-color: #ec0d0d;
+    color: #FFFFFF;
+    border: none;
+}
+
+.btn-purpule:hover {
+    cursor: pointer;
+    background-color: #ec0d0d;
+    transition: 500ms;
+}
+
+.grey-background:hover {
+    cursor: pointer;
+    background-color: gainsboro;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.material-symbols-outlined:hover {
+    cursor: pointer;
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 700,
+    'GRAD' 0,
+    'opsz' 48
+  }
+
+.divider {
+    border-bottom: 2px solid #ec0d0d;
+    width: 100%;
+    margin: 30px 0px;
+}
