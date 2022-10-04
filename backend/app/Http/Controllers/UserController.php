@@ -57,4 +57,16 @@ class UserController extends Controller
         ]);
     }
 
+    function getblocks(Request $request){
+        $user_id = Auth::user()->id;
+        $users = Block::select("blocked_id")
+                ->where('blocker_id',$user_id)
+                ->get();
+
+        return response()->json([
+            "status" => "Success",
+            "data" => $users
+        ]);
+    }
+
 }
