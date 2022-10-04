@@ -24,5 +24,15 @@ class UserController extends Controller
         ]);
     }
 
-    
+    function getFavorites(Request $request){
+        $user_id = Auth::user()->id;
+        $users = Favorite::select("*")
+                ->where('user_id',$user_id)
+                ->get();
+
+        return response()->json([
+            "status" => "Success",
+            "data" => $users
+        ]);
+    }
 }
