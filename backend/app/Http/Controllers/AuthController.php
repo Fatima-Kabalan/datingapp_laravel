@@ -55,7 +55,7 @@ class AuthController extends Controller
         $user->gender = $request->gender;
         $user->preferred_gender = $request->preferred_gender;
         $user->location = $request->location;
-        $user->status = 0;
+        $user->status = 'Available';
         $user->bio = "I'm here";
         $user->profile_pic = "https://i.imgur.com/8Q9QY7C.png";
         $user->save();
