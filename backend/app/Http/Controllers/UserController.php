@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Favorite;
+use App\Models\Chat;
 use Auth;
 
 
@@ -31,5 +32,21 @@ class UserController extends Controller
             "data" => $users
         ]);
     }
+
+    function getChats(Request $request){
+        $sender_id= $request->sender_id;
+        $recipient_id= $request->recipient_id;
+        $users = Chat::select("message")
+                ->where('sender_id',$sender_id)
+                ->where('recipient_id',$recipient_id)
+                ->get();
+
+        return response()->json([
+            "status" => "Success",
+            "data" => $users
+        ]);
+    }
+
+
 
 }
