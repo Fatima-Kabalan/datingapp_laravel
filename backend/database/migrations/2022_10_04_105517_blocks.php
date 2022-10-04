@@ -16,6 +16,6 @@ class Blocks extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('blocks');
+        
     }
 }

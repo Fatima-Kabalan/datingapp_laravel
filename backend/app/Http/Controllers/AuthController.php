@@ -8,11 +8,10 @@ use App\Models\User;
 class AuthController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('auth:api', ['except' => ['login','register']]);
-    }
-
+    // public function __construct()
+    // {
+    //     $this->middleware('auth:api', ['except' => ['login','register']]);
+    // }
     public function login(Request $request)
     {
         $request->validate([
@@ -48,11 +47,18 @@ class AuthController extends Controller
             'password' => 'required|string|min:6',
         ]);
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
+        $user = new User;
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password);
+        $user->age = $request->age;
+        $user->gender = $request->gender;
+        $user->preferred_gender = $request->preferred_gender;
+        $user->location = $request->location;
+        $user->status = 0;
+        $user->bio = "I'm here";
+        $user->profile_pic = "https://i.imgur.com/8Q9QY7C.png";
+        $user->save();
 
         $token = Auth::login($user);
         return response()->json([

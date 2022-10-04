@@ -11,7 +11,8 @@ class Chats extends Migration
         Schema::create('chats', function (Blueprint $table) {            
             $table->foreignId('sender_id')->references('id')->on('users');           
             $table->foreignId('recipient_id')->references('id')->on('users');        
-            $table->string('message');      
+            $table->string('message'); 
+            $table->time('time_sent');      
         });
     }
 

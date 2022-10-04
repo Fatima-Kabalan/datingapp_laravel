@@ -13,9 +13,9 @@ class Favorites extends Migration
             $table->foreignId('user_id')->references('id')->on('users');       
        });
     }
-
+    
     public function down()
     {
-        Schema::dropIfExists('favorites');
+        //
     }
 }
