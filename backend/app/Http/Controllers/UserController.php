@@ -35,4 +35,16 @@ class UserController extends Controller
             "data" => $users
         ]);
     }
+
+    function addFavorites(Request $request){
+        DB::table('favorites')->insert([
+            'favorite_id'=>$request->favorite_id,
+            'user_id'=>Auth::user()->id,
+        ]);
+                
+        return response()->json([
+            "status" => "Success",
+        ]);
+    }
+
 }
