@@ -278,7 +278,7 @@ body {
 }
 
 .logo-wrapper:hover {
-    background-color: #493A6F;
+    background-color: #ec0d0d;
     cursor: pointer;
 }
 
@@ -358,11 +358,11 @@ body {
 
 .burger-menu-btn:hover {
     cursor: pointer;
-    background-color: #493A6F;
+    background-color: #ec0d0d;
 }
 
 .burger-nav-bar-btns {
-    background-color: #8367C7;
+    background-color: #ec0d0d;
     transition: 500ms;
     display: none;
     list-style: none;
@@ -374,5 +374,44 @@ body {
 .display-burger-menu-items {
     display: flex !important;
     flex-direction: column;
+
+}
+
+/* Media query */
+
+@media screen and (max-width:1200px) {
+
+.nav-bar-btns {
+    display: none;
+}
+
+.burger-menu {
+    display: inline;
+}
+
+}
+
+@media screen and (max-width:840px) {
+
+.index-body-wrapper {
+    flex-direction: column;
+}
+
+.index-body-wrapper > div {
+    width: 100%;
+    align-items: center;
+}
+
+.form-wrapper {
+    width: 100%;
+}
+
+.page-content-wrapper form {
+    width: 70%;
+}
+
+.title-wrapper {
+    display: none;
+}
 
 }
