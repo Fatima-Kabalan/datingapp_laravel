@@ -69,4 +69,15 @@ class UserController extends Controller
         ]);
     }
 
+    function addBlocks(Request $request){
+        DB::table('blocks')->insert([
+            'blocked_id'=>$request->blocked_id,
+            'blocker_id'=>Auth::user()->id,
+        ]);
+                
+        return response()->json([
+            "status" => "Success",
+        ]);
+    }
+
 }
