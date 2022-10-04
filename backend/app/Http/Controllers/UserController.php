@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Favorite;
 use Auth;
 
 
@@ -18,4 +19,17 @@ class UserController extends Controller
             "data" => $users
         ]);
     }
+
+    function getFavorites(Request $request){
+        $favorite_id = $request->favorite_id;
+        $users = Favorite::select("*")
+                ->where('favorite_id',$favorite_id)
+                ->get();
+
+        return response()->json([
+            "status" => "Success",
+            "data" => $users
+        ]);
+    }
+
 }
