@@ -47,4 +47,14 @@ class UserController extends Controller
         ]);
     }
 
+    function deleteFavorite(Request $request){
+        DB::table('favorites')
+        ->where('user_id','=', Auth::user()->id)
+        ->where('favorite_id', '=', $request->favorite_id)
+        ->delete();
+        return response()->json([
+            "status" => "Success",
+        ]);
+    }
+
 }
