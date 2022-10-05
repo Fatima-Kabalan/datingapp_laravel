@@ -4,6 +4,7 @@ const signupPopup = document.getElementById("signup-popup");
 const closeBtn = document.getElementById("close");
 const signupBtn = document.getElementById("signup-btn");
 const signinBtn = document.getElementById("signin-btn");
+const interests = document.getElementById("interests");
 
 
 if (typeof signupPopup.showModal !== 'function') {
@@ -51,9 +52,14 @@ const signIn = (email,password) => {
    .then((response) => {
 
         if(response.data.status == "success"){
+            localStorage.setItem("token" , response.data.authorisation.token)
             window.location.replace("feed.html");
         }
    }
     )
     .catch((error) => console.log(error))
 }
+
+
+
+
