@@ -18,18 +18,10 @@ window.onload = ()=>{
         <span class="material-symbols-outlined" id="fav_${user_id}">favorite</span>
         <span class="material-symbols-outlined" id="chat_${user_id}">chat_bubble</span>
         </div>`;
-        let param = new URLSearchParams();
-    param.append("token" , localStorage.getItem("token"));
-    param.append("faorite_id" , user_id);
+    });
 
-        document.getElementById("fav_"+user_id).onclick=()=>{
-            axios.post("http://127.0.0.1:8000/api/v1/addFavorites",param).then((res)=>{
-                console.log(res);
-        })};
-    });
-    
-    });
+});
 }
 
-
+    
 
