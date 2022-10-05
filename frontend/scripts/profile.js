@@ -6,6 +6,8 @@ const closeBtn = document.getElementById("close");
 const signupBtn = document.getElementById("signup-btn");
 const signinBtn = document.getElementById("signin-btn");
 const interests = document.getElementById("interests");
+
+
 // Event listeners functions
 const openSignupPopup = () => {
     signupPopup.showModal();
@@ -53,4 +55,3 @@ const signUp = (email,password,name,age,gender,intreset,location) => {
     )
     .catch((error) => console.log(error))
 }
-
