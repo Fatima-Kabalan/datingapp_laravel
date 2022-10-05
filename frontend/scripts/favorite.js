@@ -1,10 +1,13 @@
+const interests = document.getElementById("interests");
+
+
 let params = new URLSearchParams();
 params.append("token" , localStorage.getItem("token"));
 console.log(localStorage.getItem("token"));
 window.onload = ()=>{
-    axios.post("http://127.0.0.1:8000/api/v1/getUsers",params).then((res)=>{
-    let users = res.data.matches;
-
+    axios.post("http://127.0.0.1:8000/api/v1/getFavoriteUsers",params).then((res)=>{
+    let users = res.data.favorites;
+console.log(res);
     users.forEach(element => {
         let user_id = element.id;
         interests.innerHTML+=`<div class="card">

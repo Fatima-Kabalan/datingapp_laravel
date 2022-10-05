@@ -21,7 +21,7 @@ console.log(localStorage.getItem("token"));
             </div>`;
         });
     const fav = document.querySelectorAll(".new");
-    
+
     fav.forEach(element => {
     let param = new URLSearchParams();
     param.append("token" , localStorage.getItem("token"));
@@ -31,7 +31,6 @@ console.log(localStorage.getItem("token"));
                     console.log(res);
                 });
         };
-
     });
     }
 
