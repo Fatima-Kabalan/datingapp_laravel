@@ -25,7 +25,7 @@ datingapp_pages.getAPI = async (api_url) => {
 datingapp_pages.postAPI = async (api_url, api_data, api_token = null) => {
     try{
         return await axios.post(
-            api_url,
+            datingapp_pages.baseURL/api_url,
             api_data,
             { headers:{
                     'Authorization' : "token " + api_token

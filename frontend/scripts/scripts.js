@@ -1,9 +1,9 @@
+
 const signupPopupBtn = document.getElementById("signup");
 const signupPopup = document.getElementById("signup-popup");
 const closeBtn = document.getElementById("close");
 const signupBtn = document.getElementById("signup-btn");
 const signinBtn = document.getElementById("signin-btn");
-
 
 
 if (typeof signupPopup.showModal !== 'function') {
@@ -31,3 +31,4 @@ const closeSignupPopup = () => {
 // Event listeners
 signupPopupBtn.addEventListener("click", openSignupPopup);
 closeBtn.addEventListener("click", closeSignupPopup);
+
