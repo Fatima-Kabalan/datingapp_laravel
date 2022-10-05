@@ -32,3 +32,23 @@ const closeSignupPopup = () => {
 signupPopupBtn.addEventListener("click", openSignupPopup);
 closeBtn.addEventListener("click", closeSignupPopup);
 
+let signAPI = "http://127.0.0.1:8000/api/login";
+
+signinBtn.onclick = (e)=>{
+    e.preventDefault();
+    let enteredemail = document.getElementById("email-signin").value
+    let enteredpassword = document.getElementById("password-signin").value
+    if(enteredemail && enteredpassword){
+        signIn(enteredemail,enteredpassword);
+    }
+}
+
+function signIn(email,password){
+
+   let payload = { email : email, password: password};
+   axios.post(signAPI,payload)
+   .then((response) => 
+        console.log("response: ", response)
+    )
+    .catch((error) => console.log(error))
+}
