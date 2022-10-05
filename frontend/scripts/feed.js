@@ -16,8 +16,10 @@ console.log(localStorage.getItem("token"));
             <p>${element.location}</p>
             <p>${element.preferred_gender}</p>
             <p>${element.bio}</p>
+            <div class="flex flex-row">
             <span class="material-symbols-outlined new"  id="${element.id}">favorite</span>
             <span class="material-symbols-outlined"  id="chat_${user_id}">chat_bubble</span>
+            </div>
             </div>`;
         });
     const fav = document.querySelectorAll(".new");
