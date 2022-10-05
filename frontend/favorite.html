@@ -1,55 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/styles.css">
-    <title>Favorites</title>
-</head>
-<body class="background-image">
-        <!-- Navigation bar -->
-        <nav class="nav">
-            <!-- Website title and logo -->
-            <div class="logo-title-wrapper">
-                <div class="logo-wrapper">
-                    <img src="./assets/Images/logo.png" alt="Logo" width="100%">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/styles.css">
+        <title>Favorites</title>
+    </head>
+
+    <body class="background-image">
+            <!-- Navigation bar -->
+            <nav class="nav">
+                <!-- Website title and logo -->
+                <div class="logo-title-wrapper">
+                    <div class="logo-wrapper">
+                        <img src="./assets/Images/logo.png" alt="Logo" width="100%">
+                    </div>
+                    <h1 class="title-wrapper">Love Birds</h1>
                 </div>
-                <h1 class="title-wrapper">Love Birds</h1>
-            </div>
-            <!-- Navigation items -->
-            <ul class="nav-bar-btns">
-                <li class="nav-bar-item" id="favorite-nav-btn">
-                    <a href="./favorite.html" class="favorite"><p>Favorites</p></a>
-                </li>
-                <li class="nav-bar-item" id="profile-nav-btn">
-                    <a href="/profile.html" class="Profile"><p>Profile</p></a>
-                </li>
-            </ul>
-            <!-- Hamburger menu -->
-            <div class="burger-menu" id="burger-menu">
-                <div class="burger-menu-btn" id="burger-menu-btn">
-                    <span class="material-symbols-outlined"> menu </span>
-                </div>
-                <ul class="burger-nav-bar-btns" id="burger-nav-bar-btns">
-                    <li class="nav-bar-item" id="burger-favorite-nav-btn">
-                        <p>Favorites</p>
+                <!-- Navigation items -->
+                <ul class="nav-bar-btns">
+                    <li class="nav-bar-item" id="favorite-nav-btn">
+                        <a href="./favorite.html" class="favorite"><p>Favorites</p></a>
                     </li>
-                    <li class="nav-bar-item" id="burger-chat-nav-btn">
-                        <p>Chat</p>
-                    </li>
-                    <li class="nav-bar-item" id="burger-profile-nav-btn">
-                        <p>Profile</p>
+                    <li class="nav-bar-item" id="profile-nav-btn">
+                        <a href="/profile.html" class="Profile"><p>Profile</p></a>
                     </li>
                 </ul>
+                <!-- Hamburger menu -->
+                <div class="burger-menu" id="burger-menu">
+                    <div class="burger-menu-btn" id="burger-menu-btn">
+                        <span class="material-symbols-outlined"> menu </span>
+                    </div>
+                    <ul class="burger-nav-bar-btns" id="burger-nav-bar-btns">
+                        <li class="nav-bar-item" id="burger-favorite-nav-btn">
+                            <p>Favorites</p>
+                        </li>
+                        <li class="nav-bar-item" id="burger-chat-nav-btn">
+                            <p>Chat</p>
+                        </li>
+                        <li class="nav-bar-item" id="burger-profile-nav-btn">
+                            <p>Profile</p>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- cards -->
+            <div class="container grid" id="interests"> 
             </div>
-        </nav>
-        <!-- cards -->
-        <div class="container grid" id="interests"> 
         </div>
-    </div>
-   
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
-    <script src="./scripts/favorite.js"></script>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+        <script src="./scripts/favorite.js"></script>
+    </body>
+
 </html>
