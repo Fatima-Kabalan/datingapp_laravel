@@ -46,8 +46,31 @@
            <section class="container flex">
             <div class="circle">
             </div>
-            <button type="submit" class="button-pic">Edit Profile</button>
+            <button type="submit" id="edit" class="button-pic">Edit Profile</button>
            </section>
+           <!-- edit profile -->
+           <dialog class="signup-popup hide" id="signup-popup">
+                <span class="material-symbols-outlined grey-background" id="close">close</span>
+                <h1>Create a new account</h1>
+                <form>
+                    <label for="name-input">Full Name</label>
+                    <input type="text" placeholder="name" id="name-input" required>
+                    <label for="email-input">Email</label>
+                    <input type="email" placeholder="Email" id="email-input" required>
+                    <label for="password-input">Password</label>
+                    <input type="password" placeholder="Password" id="password-input" required>
+                    <label for="age-input">Age</label>
+                    <input type="text" placeholder="age" id="age-input" required>
+                    <label for="Gender-input">Gender</label>
+                    <input type="text" placeholder="gender" id="gender-input" required>
+                    <label for="preferred_gender-input">Preferred_gender</label>
+                    <input type="text" placeholder="preferred_gender" id="preferred_gender" required>
+                    <label for="location-input">Location</label>
+                    <input type="text" placeholder="location" id="location-input" required>
+                    <p id="error-output"></p>
+                    <button class="btn btn-red" id="signup-btn" type="button">Edit profile</button>
+                </form>
+            </dialog>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="./scripts/profile.js"></script>
     </body>
