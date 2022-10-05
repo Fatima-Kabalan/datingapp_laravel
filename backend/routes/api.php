@@ -12,14 +12,14 @@ Route::group(["prefix"=> "v1"], function(){
     Route::group(["middleware" => "auth:api"], function(){
         Route::post("/getUsers", [UserController::class, "getUsers"])->name("getUsers"); 
         Route::post("/getFavorites", [UserController::class, "getFavorites"])->name("getFavorites"); 
+        Route::post("/getFavoriteUsers", [UserController::class, "getFavoriteUsers"])->name("getFavoriteUsers"); 
         Route::post("/getChats", [UserController::class, "getChats"])->name("getChats"); 
         Route::post("/getblocks", [UserController::class, "getblocks"])->name("getblocks"); 
         Route::post("/editProfiles", [UserController::class, "editProfiles"])->name("editProfiles"); 
         Route::post("/addFavorites", [UserController::class, "addFavorites"])->name("addFavorites"); 
         Route::post("/deleteFavorites", [UserController::class, "deleteFavorite"])->name("deleteFavorites"); 
         Route::post("/addBlocks", [UserController::class, "addBlocks"])->name("addBlocks"); 
-
-
+        Route::post("/editProfile", [UserController::class, "update"])->name("updateProfile"); 
     });
 
 });

@@ -12,17 +12,29 @@ use Auth;
 class UserController extends Controller
 {
     function getUsers(Request $request){
-        $preferred_gender = Auth::user()->preferred_gender;
-        $prefered_gender = $request->preferred_gender;
-        $users = User::select("*")
-                ->where('gender',$prefered_gender)
-                ->get();
-
+        $matches = DB::table('users')
+            ->where('id', '!=', Auth::user()->id)
+            ->where('gender', Auth::user()->preferred_gender)
+            ->get();
         return response()->json([
             "status" => "Success",
-            "data" => $users
+            "matches" => $matches
         ]);
     }
+
+    function getFavoriteUsers()
+    {
+        $favorites = DB::table('favorites')->where('user_id', Auth::user()->id)->get();
+        $favoriteUsers = [];
+        foreach ($favorites as $favorite) {
+            $favoriteUsers[] = User::find($favorite->favorite_id);
+        }
+        return response()->json([
+            "status" => "Success",
+            "favorites" => $favoriteUsers
+        ]);
+    }
+
 
     function getFavorites(Request $request){
         $user_id = Auth::user()->id;
@@ -78,6 +90,23 @@ class UserController extends Controller
         return response()->json([
             "status" => "Success",
         ]);
+    }
+
+    public function update(Request $request)
+    {
+        $user = User::find(Auth::user()->id);
+        $user->name = $request->name ? $request->name : $user->name;
+        $user->bio = $request->bio ? $request->bio : $user->bio;
+        $user->age = $request->age ? $request->age : $user->age;
+        $user->profile_pic = $request->profile_pic ? $request->profile_pic : $user->profile_pic;
+        $user->preferred_gender = $request->preferred_gender ? $request->preferred_gender : $user->preferred_gender;
+        $user->location = $request->location ? $request->location : $user->location;
+        $user->status = $request->status ? $request->status : $user->status;
+        $user->save();
+        return response()->json([
+            "status" => "success",
+            "user" => $user
+        ], 200);
     }
 
 }
