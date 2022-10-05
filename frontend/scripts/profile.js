@@ -23,7 +23,7 @@ signupPopupBtn.addEventListener("click", openSignupPopup);
 closeBtn.addEventListener("click", closeSignupPopup);
 
 
-let signUpAPI = "http://127.0.0.1:8000/api/register";
+let signUpAPI = "http://127.0.0.1:8000/api/v1/editProfile";
 
 signupBtn.onclick = (e)=>{
     e.preventDefault();
@@ -34,14 +34,14 @@ signupBtn.onclick = (e)=>{
     let enteredgender = document.getElementById("gender-input").value
     let enteredintreset = document.getElementById("preferred_gender").value
     let enteredlocation = document.getElementById("location-input").value
-    if(enteredemail && enteredpassword){
+
         signUp(enteredemail,enteredpassword,enteredname,enteredage,enteredgender,enteredintreset,enteredlocation);
-    }
+
 }
 
 const signUp = (email,password,name,age,gender,intreset,location) => {
 
-   let payload = { email: email, password: password , name: name , gender: gender , preferred_gender: intreset , location: location , age: age} 
+   let payload = { email: email, password: password , name: name , gender: gender , preferred_gender: intreset , location: location , age: age , token:localStorage.getItem("token")} 
    console.log("payload: ", payload)
    axios.post(signUpAPI,payload)
    .then((response) => {
