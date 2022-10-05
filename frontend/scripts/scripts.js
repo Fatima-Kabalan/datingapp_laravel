@@ -59,7 +59,3 @@ const signIn = (email,password) => {
     )
     .catch((error) => console.log(error))
 }
-
-
-
-
