@@ -43,12 +43,17 @@ signinBtn.onclick = (e)=>{
     }
 }
 
-function signIn(email,password){
+const signIn = (email,password) => {
 
    let payload = { email : email, password: password};
+   console.log("payload: ", payload)
    axios.post(signAPI,payload)
-   .then((response) => 
-        console.log("response: ", response)
+   .then((response) => {
+
+        if(response.data.status == "success"){
+            window.location.replace("feed.html");
+        }
+   }
     )
     .catch((error) => console.log(error))
 }
