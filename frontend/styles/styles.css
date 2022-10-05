@@ -380,18 +380,31 @@ body {
 /* cards */
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(239, 231, 231, 0.2);
     max-width: 300px;
     margin: auto;
     text-align: center;
     font-family: arial;
     padding: 2rem;
+    color:white;
+    background-color: #d85e5e;
+}
+
+.flex{
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
 }
 
 .title {
     color: grey;
     font-size: 18px;
 }
+
+.flex-row{
+    flex-direction:row;
+}
+
 
 .button-card {
     border: none;

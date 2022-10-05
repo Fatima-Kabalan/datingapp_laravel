@@ -8,7 +8,7 @@ console.log(localStorage.getItem("token"));
     if(res.data){
         users.forEach(element => {
             let user_id = element.id;
-            interests.innerHTML+=`<div class="card">
+            interests.innerHTML+=`<div class="card flex">
             <img src="" alt="pic" style="width:100%">
             <h1>${element.name}</h1>
             <p>${element.gender}</p>
