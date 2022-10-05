@@ -44,7 +44,6 @@ body {
 }
 
 .main-logo {
-    height: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -430,6 +429,19 @@ body {
 
 }
 
+/* links */
+
+.favorite{
+    text-decoration:none;
+    color:white;
+}
+
+.Profile{
+    text-decoration:none;
+    color:white;
+}
+
+
 @media screen and (max-width:840px) {
 
 .index-body-wrapper {
@@ -454,3 +466,4 @@ body {
 }
 
 }
+

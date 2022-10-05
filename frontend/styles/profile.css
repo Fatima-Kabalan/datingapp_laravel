@@ -1,6 +1,42 @@
 .circle{
-height:200px;
-width: 200px;
-background-color: red;
-border-radius: 100%;
+    height:200px;
+    width: 200px;
+    background-color: rgb(230, 208, 208);
+    border-radius: 100%;
+    margin:10px;
 }
+
+.flex{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+
+.button-pic{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius:25px;
+}
+
+
+.button-pic{
+    background-color: white; 
+    color: black; 
+    border: 2px solid #f44336;
+  }
+  
+.button-pic:hover {
+    background-color: #f44336;
+    color: white;
+}
+ 

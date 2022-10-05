@@ -8,8 +8,7 @@
         <link rel="stylesheet" href="./styles/profile.css">
         <title>Profile</title>
     </head>
-    <body>
-        <div class="get-your-match-page-wrapper">
+    <body class="background-image">
             <!-- Navigation bar -->
             <nav class="nav">
                 <!-- Website title and logo -->
@@ -22,10 +21,7 @@
                 <!-- Navigation items -->
                 <ul class="nav-bar-btns">
                     <li class="nav-bar-item" id="favorite-nav-btn">
-                        <a href="/favorite.html"><p>Favorite</p></a>
-                    </li>
-                    <li class="nav-bar-item" id="chat-nav-btn">
-                        <p>Chat</p>
+                        <a href="/favorite.html" class="favorite"><p>Favorites</p></a>
                     </li>
                     <li class="nav-bar-item" id="profile-nav-btn">
                         <p>Profile</p>
@@ -40,9 +36,6 @@
                         <li class="nav-bar-item" id="burger-favorite-nav-btn">
                             <p>Favorites</p>
                         </li>
-                        <li class="nav-bar-item" id="burger-chat-nav-btn">
-                            <p>Chat</p>
-                        </li>
                         <li class="nav-bar-item" id="burger-profile-nav-btn">
                             <a href="/profile.html"><p>Profile</p></a>
                         </li>
@@ -50,10 +43,11 @@
                 </div>
             </nav>
            <!-- Creating the whole block -->
-           <div class="circle">
-
-           </div>
-        
+           <section class="container flex">
+            <div class="circle">
+            </div>
+            <button type="submit" class="button-pic">Edit Profile</button>
+           </section>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="./scripts/profile.js"></script>
     </body>
